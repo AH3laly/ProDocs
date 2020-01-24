@@ -22,12 +22,13 @@
 
 # Components:
 - Project (Project contain one or more Stories )
-- Story (Story contain one or more Articles)
-- Article (Article Markdown Content)
+- Story
 - Users
 - Global Access Control Lists
 - Project Access control List
 - Comments (for each article)
+- Bread Cramps
+
 
 # Global Access Control Lists:
 - Project Create
@@ -37,6 +38,9 @@
 - Comment Approve
 
 # Project Access Control List
+- Project Scope (Public or Private).
+-- Public Projects are visible to external world.
+-- Private Projects are invisible to external world and controllable by Access Control Lists.
 - Project Update
 - Project Delete
 - Project Assign Users
@@ -45,11 +49,13 @@
 
 
 # Project Config File:
-- Auto Approve Comments
-- Allow User Registration.
+- Auto Approve User Registrations (True or False)
+- Allow User Registration (True or False).
+- Require email verification for newly registered users (True or False)
+- Allow Password Reset (True or False)
+- Invalid Password Lockout time (Number of Minutes).
 -
 
-# Use
 
 # User Story:
 - Create users (Invitation through Email)
@@ -66,6 +72,20 @@
 - Table
 - Box (Notice, Success, Warning, Alert)
 
+
+# Forms:
+- Login
+- Register
+- Password Reset
+- Comment Box
+- Profile Update
+
+# Security Notes:
+- All forms must be secured Using Capcha.
+- All forms must be secured using CSRF tokens.
+- All forms must be secured against XSS attacks.
+- All forms must be secured against SQL injection.
+- Five invalid login attempts will lock account for 30 minutes and notify admin.
 
 
 # Database Structure:
@@ -98,16 +118,6 @@ CREATE TABLE story (
   name varchar(255) NOT NULL,
   url_key varchar(255) NOT NULL,
   description text(1000) NULL,
-  create_date datetime NOT NULL default CURRENT_TIMESTAMP,
-  update_date datetime NULL,
-  owner_id int(11) NOT NULL
-) charset utf8;
-
-CREATE TABLE article (
-  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
-  url_key varchar(255) NOT NULL,
-  description longtext(10000) NULL,
   create_date datetime NOT NULL default CURRENT_TIMESTAMP,
   update_date datetime NULL,
   owner_id int(11) NOT NULL
