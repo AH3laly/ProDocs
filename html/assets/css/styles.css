@@ -1,3 +1,6 @@
+body {
+  background-image: url(../img/bg.png);
+}
 .page {
   width: 100%;
 }
@@ -90,6 +93,10 @@
 .page .body .nav .nav-ul li:hover {
   background-color: #3c79e3;
 }
+.page .body .nav .nav-ul li.active, .page .body .nav .nav-ul li.active a {
+  background-color: #3c79e3;
+  color: #FFF;
+}
 .page .body .nav .nav-ul .nav-arrow {
 
 }
@@ -124,8 +131,9 @@
 .box {
   border: 1px solid #efefef;
   border-radius: 10px 0px 0px 0px;
-  margin: 10px 0px;
+  margin: 10px 5px;
   background-color: #f2f2f2;
+  /*background-image: url(../img/bg.png);*/
   border: solid 1px #aeadad;
 }
 .box .box-head {
@@ -151,10 +159,20 @@
 /* Form Fields */
 form .form-field {
   padding: 10px 10px;
+  display: flex;
+
 }
 form .field-label {
   width: 20%;
   display: inline-block;
+}
+.field-complex {
+  width:80%;
+}
+.field-comment {
+  display: block;
+  font-size: 0.7rem;
+  margin: 5px 0px;
 }
 input[type="text"],input[type="password"], select{
   height: 25px;
@@ -162,12 +180,12 @@ input[type="text"],input[type="password"], select{
   padding: 0px 5px;
   border-radius: 5px;
   border: solid 1px #aeadad;
-  width: 60%;
+  width: 100%;
 }
 select {
   background-color: #FFF !important;
   height: 30px;
-  width: 30%;
+  width: 100%;
 }
 input[type="submit"],button {
   height: 30px;
@@ -181,7 +199,7 @@ textarea {
   border-radius: 5px;
   border: solid 1px #aeadad;
   resize: none;
-  width: 60%;
+  width: 100%;
 }
 .checkbox {
   font-size: 0.9em;
