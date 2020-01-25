@@ -79,6 +79,10 @@
 - Password Reset
 - Comment Box
 - Profile Update
+- Invite to Project.
+- Create Story.
+- Update Story.
+
 
 # Security Notes:
 - All forms must be secured Using Capcha.
