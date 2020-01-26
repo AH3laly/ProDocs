@@ -133,7 +133,7 @@ body {
   border-radius: 10px 0px 0px 0px;
   margin: 10px 5px;
   background-color: #f2f2f2;
-  /*background-image: url(../img/bg.png);*/
+  background-image: url(../img/bg.png);
   border: solid 1px #aeadad;
 }
 .box .box-head {
