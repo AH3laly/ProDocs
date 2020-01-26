@@ -1,6 +1,19 @@
 # Introduction to ProDocs:
 `ProDocs` is a web application to create documentation to any project.
 
+# index
+- [Database Structure](#database-structure)
+- [User Story](#user-story)
+- [Use Cases](#Use-Cases)
+- [Components](#Components)
+- [Global Access Control Lists](#Global-Access-Control-Lists)
+- [Project Access Control List](#Project-Access-Control-List)
+- [Project Config File](#Project-Config-File)
+- [Article Available Tags](#Article-Available-Tags)
+- [Forms](#Forms)
+- [Security Notes](#Security-Notes)
+- [Database Structure](#database-structure)
+
 # User Story:
 - We need to create a site for each client.
 - User use username and password to access his site.
@@ -13,6 +26,12 @@
 - When a user login to his account, all projects from any site will be available in my Projects menu.
 - Any user can post comment on (Project, Story, Article)
 - We will export whole project to PDF in the near future.
+- Create users (Invitation through Email)
+- Create Projects
+- Create Story (Project contain one or more Stories)
+- Create Articles (Story contain one or more articles)
+- We use Markdown Editor to create article content
+- Assign Users to Project
 
 
 # Use Cases:
@@ -54,16 +73,7 @@
 - Require email verification for newly registered users (True or False)
 - Allow Password Reset (True or False)
 - Invalid Password Lockout time (Number of Minutes).
--
 
-
-# User Story:
-- Create users (Invitation through Email)
-- Create Projects
-- Create Story (Project contain one or more Stories)
-- Create Articles (Story contain one or more articles)
-- We use Markdown Editor to create article content
-- Assign Users to Project
 
 ## Article Available Tags:
 - link
@@ -80,6 +90,8 @@
 - Comment Box
 - Profile Update
 - Invite to Project.
+- Create Project.
+- Update Project.
 - Create Story.
 - Update Story.
 
